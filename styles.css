@@ -1,0 +1,287 @@
+/*Estils generals*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #65b539a1; /*Color de fons*/
+    color: #333;
+}
+
+h1, h2 {
+    color: #ffffff; /*Color de la lletre*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    background-image: url(media/Girona1.jpg);
+    background-size: cover;
+    background-position: center; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    color: white;
+    font-size: 7rem;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: #f5f5f5;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    margin: 0 5%;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: #5d5d5d;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.gallery-item:hover img {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.gallery-item:hover img {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#about {
+    padding: 20px;
+}
+
+.about-container {
+    margin-top: 20px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+input, textarea, button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, button:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #5cb85c;
+    transform: scale(1.1);
+}
